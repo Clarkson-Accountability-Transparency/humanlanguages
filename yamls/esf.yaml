@@ -1,0 +1,58 @@
+language: Spanish (female professions)
+model: models/eswiki/ESWIKI
+neutral_words:
+# nurse
+- enfermera
+# teacher
+- professora
+# writer
+- escritora
+# engineer
+- ingeniera
+# scientist
+- científica
+# manager (neutral)
+- gerente
+# driver
+- conductora
+# banker
+- banquera
+# electrician (neutral)
+- electricista
+ # bartender
+- camarera
+# musician
+- música
+# artist (neutral)
+- artista
+# chef
+- cocinera
+# filmmaker (neutral)
+- cineasta
+# judge
+- jueza
+# comedian
+- cómica
+# inventor
+- inventora
+# worker
+- trabajadora
+# soldier
+- soldada
+# journalist (neutral)
+- periodista
+word_pairs:
+- - mujer
+  - hombre
+- - hija
+  - hijo
+- - madre
+  - padre
+- - niña
+  - niño
+- - reina
+  - rey
+- - esposa
+  - esposo
+- - señora
+  - señor

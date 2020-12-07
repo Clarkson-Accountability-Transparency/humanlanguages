@@ -1,0 +1,41 @@
+language: French
+model: models/frwiki/FRWIKI
+neutral_words:
+- infirmière
+- professeuse
+- écrivaine
+- ingénieuse
+# Neutral
+- scientifique
+- directrice
+- chauffeuse
+- banquière
+- électricienne
+- barmaid
+- musicienne
+# Neutral
+- artiste
+- chef
+- cinéaste
+# Neutral
+- juge
+- comédienne
+- inventrice
+- ouvrière
+- soldat
+- journaliste
+word_pairs:
+- - femme
+  - homme
+- - fille
+  - fils
+- - mère
+  - père
+- - fille
+  - garçon
+- - reine
+  - roi
+- - épouse
+  - mari
+- - madame
+  - monsieur

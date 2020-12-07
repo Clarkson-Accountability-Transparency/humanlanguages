@@ -1,0 +1,11 @@
+#This is the default config file. It contains model location.
+ar: /home/tmiddlet_/langauges/data/models/ARWIKI
+de: /home/tmiddlet_/langauges/data/models/DEWIKI
+en: /home/tmiddlet_/langauges/data/models/ENWIKI
+es: /home/tmiddlet_/langauges/data/models/ESWIKI
+fa: /home/tmiddlet_/langauges/data/models/FAWIKI
+fr: /home/tmiddlet_/langauges/data/models/FRWIKI
+he: /home/tmiddlet_/langauges/data/models/HEWIKI
+ur: /home/tmiddlet_/langauges/data/models/URWIKI
+wo: /home/tmiddlet_/langauges/data/models/WOWIKI
+zh: /home/tmiddlet_/langauges/data/models/ZHWIKI

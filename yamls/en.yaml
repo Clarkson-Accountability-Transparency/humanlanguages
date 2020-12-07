@@ -1,0 +1,38 @@
+language: English
+model: models/enwiki/ENWIKI
+neutral_words:
+- nurse
+- teacher
+- writer
+- engineer
+- scientist
+- manager
+- driver
+- banker
+- electrician
+- bartender
+- musician
+- artist
+- chef
+- filmmaker
+- judge
+- comedian
+- inventor
+- worker
+- soldier
+- journalist
+word_pairs:
+- - woman
+  - man
+- - daughter
+  - son
+- - mother
+  - father
+- - girl
+  - boy
+- - queen
+  - king
+- - wife
+  - husband
+- - madam
+  - sir

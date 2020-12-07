@@ -1,0 +1,55 @@
+language: German 
+model: /home/tmiddlet_/languages/data/models/
+neutral_words:
+- Krankenpfleger
+- Lehrer
+- Autoren
+- Ingenieure
+- Wissenschaftler
+- Manager
+- Fahrer
+- Banker
+- Elektriker
+- Barkeeper
+- Musiker
+- Künstler
+- Köche
+- Filmemacher
+- Richter
+- Komiker
+- Erfinder
+- Arbeiter
+- Soldaten
+- Journalisten
+- Berühmtheiten
+- Studenten
+- Athleten
+- Schauspieler
+- Polizisten
+- Gouverneure
+- Landwirte
+- Personen/Leute
+- Anwälte
+- Abenteurer
+- Helfer
+- Botschafter
+- Analytiker
+- Astronauten
+- Astronomen
+- Biologen
+word_pairs:
+- - Frau
+  - Mann
+- - Tochter
+  - Sohn
+- - Mutter
+  - Vater
+- - Mädchen
+  - Junge
+- - Königin
+  - König
+- - Ehefrau
+  - Ehemann
+- - Dame
+  - Herr
+- 

@@ -1,0 +1,16 @@
+click==7.1.2
+jieba==0.42.1
+joblib==0.16.0
+lmdb==1.0.0
+marisa-trie==0.7.5
+mwparserfromhell==0.5.4
+numpy==1.19.1
+pkg-resources==0.0.0
+PyYAML==5.3.1
+scikit-learn==0.23.2
+scipy==1.5.2
+six==1.15.0
+sklearn==0.0
+threadpoolctl==2.1.0
+tqdm==4.48.2
+wikipedia2vec==1.0.4

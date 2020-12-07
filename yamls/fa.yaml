@@ -1,0 +1,58 @@
+language: Farsi
+model: models/fawiki/FAWIKI
+neutral_words:
+# nurse
+- پرستار
+# teacher
+- معلم
+# writer
+- نویسنده
+# engineer
+- مهندس
+# scientist
+- دانشمند
+# manager
+- مدیر
+# driver
+- راننده
+# banker
+- بانکدار
+# electrician
+- برقکار
+# bartender (might need update)
+- میخانه دار
+# musician
+- موسیقیدان
+# artist
+- هنرمند
+# chef
+- آشپز
+# filmmaker
+- فیبمساز
+# judge
+- فاضی
+# comedian
+- کمدین
+# inventor
+- مخترع
+# worker
+- کارگر
+# soldier
+- سرباز
+# journalist
+- روزنامه نگار
+word_pairs:
+- - زن
+  - مرد
+- - دختر
+  - پسر
+- - مادر
+  - پدر
+- - دختر
+  - پسر
+- - ملکہ
+  - پادشاه
+- - همسر
+  - شوهر
+- - خانم
+  - آقا

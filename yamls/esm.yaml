@@ -1,0 +1,58 @@
+language: Spanish (male professions)
+model: models/eswiki/ESWIKI
+neutral_words:
+# nurse
+- enfermero
+# teacher
+- professor
+# writer
+- escritor
+# engineer
+- ingeniero
+# scientist
+- científica
+# manager (neutral)
+- gerente
+# driver
+- conductor
+# banker
+- banquero
+# electrician (neutral)
+- electricista
+ # bartender
+- camarero
+# musician
+- músico
+# artist (neutral)
+- artista
+# chef
+- cocinero
+# filmmaker (neutral)
+- cineasta
+# judge
+- juez
+# comedian
+- cómico
+# inventor
+- inventor
+# worker
+- trabajador
+# soldier
+- soldado
+# journalist (neutral)
+- periodista
+word_pairs:
+- - mujer
+  - hombre
+- - hija
+  - hijo
+- - madre
+  - padre
+- - niña
+  - niño
+- - reina
+  - rey
+- - esposa
+  - esposo
+- - señora
+  - señor
