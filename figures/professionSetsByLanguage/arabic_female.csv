@@ -1,0 +1,33 @@
+professions,Arabic,gender_bias,pos
+nurse,_____,0.173936637,TRUE
+teacher,_____,-0.010462514,FALSE
+writer,_____,0.191527649,TRUE
+engineer,______,0.186475413,TRUE
+scientist,_____,0.167029959,TRUE
+manager,_____,0.329828823,TRUE
+driver,_____,0.168068114,TRUE
+banker,,0,TRUE
+musician,,0,TRUE
+artist,_____,0.223326853,TRUE
+chef,,0,TRUE
+filmmaker (Missing),,0,TRUE
+judge,_____,0.167022862,TRUE
+comedian,,0,TRUE
+inventor,______,0.231074754,TRUE
+worker,_____,0.071425744,TRUE
+soldier,_____,0.016923565,TRUE
+journalist,_____,0.119388196,TRUE
+student (Missing Male),_____,0.191997667,TRUE
+athlete,______,-0.100311506,FALSE
+actor,_____,0.253803772,TRUE
+governor,_____,0.302937692,TRUE
+farmer,______,0.06740515,TRUE
+person,,0,TRUE
+lawyer,______,0.194207967,TRUE
+adventurer,,0,TRUE
+aide,______,0.167463919,TRUE
+ambassador,_____,0.366131803,TRUE
+analyst,_____,0.191323956,TRUE
+astronaut (Missing),_____ ____,0,TRUE
+astronomer (Missing),,0,TRUE
+biologist,,0,TRUE

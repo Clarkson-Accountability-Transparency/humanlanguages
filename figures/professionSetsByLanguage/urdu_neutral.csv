@@ -1,0 +1,33 @@
+professions,Urdu,gender_bias,pos
+nurse,___,0.217431629,TRUE
+teacher,,0,FALSE
+writer,,0,FALSE
+engineer,_____,0.022365823,TRUE
+scientist,________,-0.140122767,FALSE
+manager,,0,FALSE
+driver,,0,FALSE
+banker,______,-0.050254602,FALSE
+musician,_______,0.01977822,TRUE
+artist,,0,FALSE
+chef,,0,FALSE
+filmmaker (Missing),______,0.149775633,TRUE
+judge,____,-0.178592106,FALSE
+comedian,____ ____,0,FALSE
+inventor,____,-0.100359706,FALSE
+worker,_____,0.069155258,TRUE
+soldier,____,0.005531221,TRUE
+journalist,_____,0.058203177,TRUE
+student (Missing Male),,0,FALSE
+athlete,______,-0.054413649,FALSE
+actor,,0,FALSE
+governor,____,-0.202148224,FALSE
+farmer,____,-0.009645923,FALSE
+person,___,-0.092558674,FALSE
+lawyer,____,0.004816301,TRUE
+adventurer,___ __,0,FALSE
+aide,______,-0.173586357,FALSE
+ambassador,____,-0.031919566,FALSE
+analyst,_____ ___,0,FALSE
+astronaut (Missing),______,0.049053101,TRUE
+astronomer (Missing),____ ______,0,FALSE
+biologist,____ _______,0,FALSE

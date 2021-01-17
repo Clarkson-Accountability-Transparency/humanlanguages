@@ -1,0 +1,33 @@
+professions,gender_bias,pos
+nurse,0.226181676,TRUE
+teacher,0.005606412,TRUE
+writer,-0.06478853,FALSE
+engineer,-0.156388622,FALSE
+scientist,-0.234191206,FALSE
+manager,-0.054938361,FALSE
+driver,0.038531973,TRUE
+banker,-0.099116416,FALSE
+musician,-0.121300629,FALSE
+artist,0.008417019,TRUE
+chef,0.065435664,TRUE
+filmmaker,-0.039856438,FALSE
+judge,-0.112919756,FALSE
+comedian,0.022857604,TRUE
+inventor,-0.177636026,FALSE
+worker,0.035342272,TRUE
+soldier,0.06774808,TRUE
+journalist (Missiing),0,TRUE
+student,0.084213935,TRUE
+athlete,-0.010194248,FALSE
+actor,0.144109565,TRUE
+governor,-0.003548213,FALSE
+farmer,-0.069589958,FALSE
+person,-0.043598829,FALSE
+lawyer,0.037321623,TRUE
+adventurer,0.002951142,TRUE
+aide,-0.030953453,FALSE
+ambassador,-0.010174631,FALSE
+analyst,-0.00624515,FALSE
+astronaut,0.01563631,TRUE
+astronomer (Missing),0,TRUE
+biologist (Missing),0,TRUE
