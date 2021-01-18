@@ -24,7 +24,8 @@ df_german <- read_csv("german_results.csv")
 df_french <- read_csv("french_results.csv")
 
 #TODO-I'm not sure I am choosing the right Chinese results column
-df_chinese <- read_csv("chinese_results_pca1.csv")
+df_chinese <- read_csv("chinese_results_pca0.csv")
+df_chinese_pca1 <- read_csv("chinese_results_pca1.csv")
 
 #in Farsi journalist, astronomer and biologist do not occur in corpus
 df_farsi <- read_csv("farsi_results.csv")
@@ -77,6 +78,14 @@ df_farsi <- df_farsi %>%
 
 df_chinese <- df_chinese %>% 
   mutate(language = "Chinese")
+
+
+df_chinese_pca0 <- df_chinese %>% 
+    mutate(gender = "PCA0")
+df_chinese_pca1 <- df_chinese_pca1 %>% 
+  mutate(language = "Chinese")%>%
+  mutate(gender = "PCA1")
+
 
 df_wolof <- df_wolof %>%
   mutate(language = "Wolof")
@@ -183,6 +192,8 @@ df_german_all <-rbind(df_german_female, df_german_male, df_german_neutral,
 df_arabic_all <-rbind(df_arabic_female, df_arabic_male, df_arabic_neutral,
                       df_arabic_combo)
 df_urdu_all <-rbind(df_urdu_female, df_urdu_male, df_urdu_neutral, df_urdu_english, df_urdu_combo)
+
+df_chinese_all <-rbind(df_chinese_pca0, df_chinese_pca1)
 ```
 
 #Visualizations
@@ -346,7 +357,7 @@ ggplot(data = df_urdu, aes(x = professions, y = gender_bias, fill = pos)) +
 ggplot(data = df_chinese, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
-  labs(title = "Professional Set (Chinese Only)",
+  labs(title = "Professional Set (Chinese PCA0)",
        y = "Bias Measure",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
@@ -356,6 +367,23 @@ ggplot(data = df_chinese, aes(x = professions, y = gender_bias, fill = pos)) +
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 )
+```
+# Graph of just the ones for gendered languages show each variant (just female, just male, just neutral) - URDU
+```{r}
+ggplot(data = df_chinese_all, aes(x = professions, y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Professional Set (Chinese)",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-.3, 0.3)) + 
+  theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) +
+ facet_wrap(~gender, nrow = 2)
 ```
 
 ## Mess with "Theme" (delete legend, change font, center title)
