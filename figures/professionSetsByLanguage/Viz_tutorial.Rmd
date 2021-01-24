@@ -65,6 +65,9 @@ df_german_weighted_simple <-read_csv("german_weighted.csv")
 df_arabic_female <-read_csv("arabic_female.csv")
 df_arabic_male <-read_csv("arabic_male.csv")
 df_arabic_neutral <-read_csv("arabic_neutral.csv")
+df_arabic_weighted <-read_csv("arabic_weighted.csv")
+df_arabic_weighted_simple <-read_csv("arabic_weighted.csv")
+
 
 df_urdu_female <-read_csv("urdu_female.csv")
 df_urdu_male <-read_csv("urdu_male.csv")
@@ -102,6 +105,12 @@ df_arabic <- df_arabic %>%
 df_arabic_combo <- df_arabic %>%
   mutate(Arabic = "EMPTY") %>%
   mutate(gender = "Combo")
+df_arabic_weighted_simple <- df_arabic_weighted_simple %>%
+   mutate(language = "Arabic")
+df_arabic_weighted <- df_arabic_weighted %>%
+  mutate(language = "Arabic")%>%
+  mutate(Arabic = "EMPTY") %>%
+  mutate(gender = "Weighted By Word Count")
 df_arabic_female <- df_arabic_female %>%
   mutate(language = "Arabic") %>%
   mutate(gender = "Female")
@@ -202,11 +211,11 @@ df_urdu_english <- df_urdu_english %>%
 ```{r}
 df_total <-  rbind(df_english, df_chinese, df_arabic, df_spanish, df_german, df_farsi, df_french, df_urdu, df_wolof)
 
-df_total_weighted <-  rbind(df_english, df_chinese, df_arabic, df_farsi, df_french_weighted_simple, df_urdu, df_wolof, df_spanish_weighted_simple, df_german_weighted_simple)
+df_total_weighted <-  rbind(df_english, df_chinese, df_arabic_weighted_simple, df_farsi, df_french_weighted_simple, df_urdu, df_wolof, df_spanish_weighted_simple, df_german_weighted_simple)
 
 df_gendered_languages <-rbind(df_spanish, df_german, df_arabic, df_french, df_urdu)
 
-df_gendered_languages_weighted <-rbind(df_spanish_weighted_simple, df_german_weighted_simple, df_french_weighted_simple)
+df_gendered_languages_weighted <-rbind(df_spanish_weighted_simple, df_german_weighted_simple, df_french_weighted_simple, df_arabic_weighted_simple)
 
 df_nongendered_languages<-rbind(df_english, df_chinese, df_farsi, df_wolof)
 
@@ -218,7 +227,7 @@ df_german_all <-rbind(df_german_female, df_german_male, df_german_neutral,
                       df_german_combo, df_german_weighted)
 
 df_arabic_all <-rbind(df_arabic_female, df_arabic_male, df_arabic_neutral,
-                      df_arabic_combo)
+                      df_arabic_combo, df_arabic_weighted)
 df_urdu_all <-rbind(df_urdu_female, df_urdu_male, df_urdu_neutral, df_urdu_english, df_urdu_combo)
 
 df_chinese_all <-rbind(df_chinese_pca0, df_chinese_pca1)
