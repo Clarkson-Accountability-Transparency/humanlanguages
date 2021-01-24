@@ -73,6 +73,8 @@ df_urdu_female <-read_csv("urdu_female.csv")
 df_urdu_male <-read_csv("urdu_male.csv")
 df_urdu_neutral <-read_csv("urdu_neutral.csv")
 df_urdu_english <-read_csv("urdu_english.csv")
+df_urdu_weighted <-read_csv("urdu_weighted.csv")
+df_urdu_weighted_simple <-read_csv("urdu_weighted.csv")
 ```
 
 
@@ -168,11 +170,11 @@ df_french_neutral <- df_french_neutral %>%
 
 df_german <- df_german %>%
   mutate(language = "German")
-df_german_weighted_simple <- df_german_weighted_simple %>%
-   mutate(language = "German")
 df_german_combo <- df_german %>%
   mutate(German = "EMPTY") %>%
   mutate(gender = "Combo")
+df_german_weighted_simple <- df_german_weighted_simple %>%
+   mutate(language = "German")
 df_german_weighted <- df_german_weighted %>%
   mutate(language = "German")%>%
   mutate(German = "EMPTY") %>%
@@ -193,6 +195,12 @@ df_urdu <- df_urdu %>%
 df_urdu_combo <- df_urdu %>%
   mutate(Urdu = "EMPTY") %>%
   mutate(gender = "Combo")
+df_urdu_weighted_simple <- df_urdu_weighted_simple %>%
+   mutate(language = "Urdu")
+df_urdu_weighted <- df_urdu_weighted %>%
+  mutate(language = "Urdu")%>%
+  mutate(Urdu = "EMPTY") %>%
+  mutate(gender = "Weighted By Word Count")
 df_urdu_female <- df_urdu_female %>%
   mutate(language = "Urdu")%>%
   mutate(gender = "Female")
@@ -211,11 +219,11 @@ df_urdu_english <- df_urdu_english %>%
 ```{r}
 df_total <-  rbind(df_english, df_chinese, df_arabic, df_spanish, df_german, df_farsi, df_french, df_urdu, df_wolof)
 
-df_total_weighted <-  rbind(df_english, df_chinese, df_arabic_weighted_simple, df_farsi, df_french_weighted_simple, df_urdu, df_wolof, df_spanish_weighted_simple, df_german_weighted_simple)
+df_total_weighted <-  rbind(df_english, df_chinese, df_arabic_weighted_simple, df_farsi, df_french_weighted_simple, df_urdu_weighted_simple, df_wolof, df_spanish_weighted_simple, df_german_weighted_simple)
 
 df_gendered_languages <-rbind(df_spanish, df_german, df_arabic, df_french, df_urdu)
 
-df_gendered_languages_weighted <-rbind(df_spanish_weighted_simple, df_german_weighted_simple, df_french_weighted_simple, df_arabic_weighted_simple)
+df_gendered_languages_weighted <-rbind(df_spanish_weighted_simple, df_german_weighted_simple, df_french_weighted_simple, df_arabic_weighted_simple, df_urdu_weighted_simple)
 
 df_nongendered_languages<-rbind(df_english, df_chinese, df_farsi, df_wolof)
 
@@ -228,7 +236,7 @@ df_german_all <-rbind(df_german_female, df_german_male, df_german_neutral,
 
 df_arabic_all <-rbind(df_arabic_female, df_arabic_male, df_arabic_neutral,
                       df_arabic_combo, df_arabic_weighted)
-df_urdu_all <-rbind(df_urdu_female, df_urdu_male, df_urdu_neutral, df_urdu_english, df_urdu_combo)
+df_urdu_all <-rbind(df_urdu_female, df_urdu_male, df_urdu_neutral, df_urdu_english, df_urdu_combo, df_urdu_weighted)
 
 df_chinese_all <-rbind(df_chinese_pca0, df_chinese_pca1)
 ```
@@ -311,7 +319,7 @@ ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
 
 ### Use same settings in Spanish (Addition Metric)
 ```{r}
-ggplot(data = df_spanish, aes(x = professions, y = gender_bias, fill = pos)) +
+ggplot(data = df_spanish_weighted_simple, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Professional Set (Spanish)",
@@ -327,7 +335,7 @@ ggplot(data = df_spanish, aes(x = professions, y = gender_bias, fill = pos)) +
 ```
 ### Use same settings in French (Addition Metric)
 ```{r}
-ggplot(data = df_french, aes(x = professions, y = gender_bias, fill = pos)) +
+ggplot(data = df_french_weighted_simple, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Professional Set (French)",
@@ -343,7 +351,7 @@ ggplot(data = df_french, aes(x = professions, y = gender_bias, fill = pos)) +
 ```
 ### Use same settings in German (Addition Metric)
 ```{r}
-ggplot(data = df_german, aes(x = professions, y = gender_bias, fill = pos)) +
+ggplot(data = df_german_weighted_simple, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Professional Set (German)",
@@ -359,7 +367,7 @@ ggplot(data = df_german, aes(x = professions, y = gender_bias, fill = pos)) +
 ```
 ## Use same settings in Arabic (Addition Metric)
 ```{r}
-ggplot(data = df_arabic, aes(x = professions, y = gender_bias, fill = pos)) +
+ggplot(data = df_arabic_weighted_simple, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Professional Set (Arabic)",
@@ -375,7 +383,7 @@ ggplot(data = df_arabic, aes(x = professions, y = gender_bias, fill = pos)) +
 ```
 ## Use same settings in Urdu (Addition Metric)
 ```{r}
-ggplot(data = df_urdu, aes(x = professions, y = gender_bias, fill = pos)) +
+ggplot(data = df_urdu_weighted_simple, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Professional Set (Urdu)",
@@ -459,7 +467,7 @@ ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = pos)) +
  facet_wrap(~language, nrow = 2)
 ```
 
-### All languages
+### All languages (Weighted average)
 
 ```{r}
 ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill = pos)) +
