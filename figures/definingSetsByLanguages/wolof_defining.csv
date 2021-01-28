@@ -1,0 +1,15 @@
+words,gender_bias,pos
+(Jigeen) woman,0.5337234734,TRUE
+(Goor) man,0.3973107717,TRUE
+(Dom ju jigeen) daughter,0,TRUE
+(Dom ju goor) son,0,TRUE
+(Yai) mother,0.1908508319,TRUE
+(Bai) father,0.765281786,TRUE
+(Janha) girl,0,TRUE
+(Hale bu goor) boy,0,TRUE
+(Jabari bur) queen,0,TRUE
+(Bur) king,0.5412092019,TRUE
+(Jabar) wife,0.2443633181,TRUE
+(Jekar) husband,0,TRUE
+(Ndawsi) madam,0,TRUE
+(Goorgi) sir,0,TRUE

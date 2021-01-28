@@ -1,0 +1,15 @@
+words,gender_bias,pos
+"(mujer), woman",0.4607290865,TRUE
+"(hombre), man",-0.209848696,FALSE
+"(hija), daughter",0.2656406141,TRUE
+"(hijo), son",-0.19177806,FALSE
+"(madre), mother",0.3369907516,TRUE
+"(padre), father",-0.1081766833,FALSE
+"(niña), girl",0.4509952273,TRUE
+"(niño), boy",-0.08278738834,FALSE
+"(reina), queen",0.4164722046,TRUE
+"(rey), king",-0.2836764177,FALSE
+"(esposa), wife",0.3285182922,TRUE
+"(esposo), husband",0.07813668752,TRUE
+"(señora), madam",0.4074694743,TRUE
+"(señor), sir",-0.188767399,FALSE
