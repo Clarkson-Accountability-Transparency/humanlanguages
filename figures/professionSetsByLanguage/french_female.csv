@@ -1,8 +1,8 @@
 professions,French,gender_bias,pos
 nurse,infirmière,0.344899073,TRUE
-teacher,professeuse,0.183064514,TRUE
+teacher,professeure,0.364471522,TRUE
 writer,écrivaine,0.393225146,TRUE
-engineer,ingénieuse,0.108989715,TRUE
+engineer,ingénieure,0.376107093,TRUE
 scientist,,0,FALSE
 manager,directrice,0.376968097,TRUE
 driver,chauffeuse,0.2927753,TRUE

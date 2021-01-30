@@ -1,33 +1,33 @@
 professions,Urdu,gender_bias,pos
 nurse,___,0.217431629,TRUE
-teacher,,0,FALSE
-writer,,0,FALSE
-engineer,,0,FALSE
-scientist,,0,FALSE
+teacher,____,0.097063711,TRUE
+writer,_______,-0.076915227,FALSE
+engineer,,,FALSE
+scientist,,,FALSE
 manager,______,-0.007173739,FALSE
 driver,_______,0.084605356,TRUE
 banker,______,-0.050254602,FALSE
-musician,,0,FALSE
+musician,,,FALSE
 artist,_____,0.127804192,TRUE
 chef,___,0.203851393,TRUE
-filmmaker (Missing),,0,FALSE
+filmmaker (Missing),,,FALSE
 judge,__,0.061619598,TRUE
-comedian,,0,FALSE
-inventor,,0,FALSE
-worker,,0,FALSE
-soldier,,0,FALSE
-journalist,,0,FALSE
-student (Missing Male),________,0.031991459,TRUE
-athlete,,0,FALSE
-actor,,0,FALSE
+comedian,_______,0.189296294,TRUE
+inventor,,,FALSE
+worker,,,FALSE
+soldier,,,FALSE
+journalist,,,FALSE
+student (Missing Male),_______,0.041668791,TRUE
+athlete,,,FALSE
+actor,,,FALSE
 governor,_____,-0.108656641,FALSE
-farmer,,0,FALSE
-person,,0,FALSE
-lawyer,,0,FALSE
-adventurer,,0,FALSE
-aide,,0,FALSE
-ambassador,,0,FALSE
-analyst,,0,FALSE
-astronaut (Missing),,0,FALSE
-astronomer (Missing),,0,FALSE
-biologist,,0,FALSE
+farmer,,,FALSE
+person,,,FALSE
+lawyer,,,FALSE
+adventurer,,,FALSE
+aide,,,FALSE
+ambassador,,,FALSE
+analyst,,,FALSE
+astronaut (Missing),,,FALSE
+astronomer (Missing),,,FALSE
+biologist,,,FALSE
