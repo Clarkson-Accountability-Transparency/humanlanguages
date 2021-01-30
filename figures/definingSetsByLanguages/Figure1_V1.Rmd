@@ -1,0 +1,229 @@
+---
+title: "Figure 1"
+output: html_notebook
+---
+
+# load libraries
+```{r}
+library(readr)
+library(ggplot2)
+library(gridExtra)
+```
+
+# Load data
+
+```{r}
+arabic <- read_csv("arabic_defining.csv")
+english <- read_csv("english_defining.csv")
+farsi <- read_csv("farsi_defining.csv")
+french <- read_csv("french_defining.csv")
+german <- read_csv("german_defining.csv")
+spanish <- read_csv("spanish_defining.csv")
+urdu <- read_csv("urdu_defining.csv")
+wolof <- read_csv("wolof_defining.csv")
+chinese <- read_csv("chinese_defining_pca0.csv")
+```
+# Chinese
+```{r}
+#Re-order data by words
+chinese$words <- fct_inorder(chinese$words)
+
+p1 <- ggplot(data = chinese, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Chinese",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p1 <- p1 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p1
+
+```
+
+# Arabic
+```{r}
+#Re-order data by words
+arabic$words <- fct_inorder(arabic$words)
+
+p2 <- ggplot(data = arabic, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Arabic",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p2 <- p2 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p2
+
+```
+
+# English
+```{r}
+
+#Re-order by defining set
+english$words <- fct_inorder(english$words)
+
+p3 <- ggplot(data = english, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "English",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+expand_limits(y = c(-0.8,0.8))
+p3 <- p3 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p3
+```
+
+# Farsi
+
+```{r}
+farsi$words <- fct_inorder(farsi$words)
+
+p4 <- ggplot(data = farsi, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Farsi",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p4 <- p4 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p4
+
+
+```
+
+# French
+
+```{r}
+
+french$words <- fct_inorder(french$words)
+p5 <- ggplot(data = french, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "French",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+ expand_limits(y = c(-0.8,0.8))
+p5 <- p5 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p5
+```
+
+# German
+```{r}
+german$words <- fct_inorder(german$words)
+
+p6 <- ggplot(data = german, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "German",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p6 <- p6 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p6
+
+```
+
+#Spanish
+```{r}
+spanish$words <- fct_inorder(spanish$words)
+
+p7 <- ggplot(data = spanish, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Spanish",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+expand_limits(y = c(-0.8,0.8))
+p7 <- p7 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p7
+```
+
+# Urdu 
+```{r}
+urdu$words <- fct_inorder(urdu$words)
+
+p8 <- ggplot(data = urdu, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Urdu",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+expand_limits(y = c(-0.8,0.8))
+p8 <- p8 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p8
+
+
+```
+
+# Wolof
+```{r}
+wolof$words <- fct_inorder(wolof$words)
+
+p9 <- ggplot(data = wolof, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Wolof",
+       y = "Bias Measure",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+expand_limits(y = c(-0.8,0.8))
+p9 <- p9 + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p9
+
+
+```
+
+# Arrange plot objects into a grid
+```{r}
+p_total <- grid.arrange(p1, p2, p3, p4, p5, p6, p7, p8, p9, nrow = 3)
+p_total
+```
+```{r}
+ggsave(file = "figure1.png", arrangeGrob(p1, p2, p3, p4, p5, p6, p7, p8, p9, ncol = 3))
+```
+
