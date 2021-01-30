@@ -209,10 +209,10 @@ df_urdu_male <- df_urdu_male %>%
   mutate(gender = "Male")
 df_urdu_neutral <- df_urdu_neutral %>%
   mutate(language = "Urdu")%>%
-  mutate(gender = "Neutral")
+  mutate(gender = "Urdu Neutral")
 df_urdu_english <- df_urdu_english %>%
   mutate(language = "Urdu")%>%
-  mutate(gender = "English Words Used in Urdu (Neutral)")
+  mutate(gender = "English Neutral")
 ```
 
 #Combine data
