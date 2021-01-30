@@ -477,7 +477,7 @@ ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = pos)) +
 pAll=ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
-  labs(title = "Profession Set Across Languages (Gender Bias Weighted Average By Word Count)f",
+  labs(title = "Profession Set Across Languages (Gender Bias Weighted Average By Word Count)",
        y = "Bias Measure",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
