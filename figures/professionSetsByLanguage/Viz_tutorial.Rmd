@@ -302,7 +302,7 @@ ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
 
 ### Mess with "Theme" (delete legend, change font, center title) - FINAL VERSION in ENGLISH?
 ```{r}
-ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
+pEnglish=ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (English)",
@@ -315,6 +315,7 @@ ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 )
+ggsave(file = "Professions_English.png", pEnglish)
 ```
 
 ### Use same settings in Spanish (Weighted By Word Count)
@@ -399,10 +400,10 @@ ggplot(data = df_urdu_weighted_simple, aes(x = professions, y = gender_bias, fil
 ```
 ## Use same settings in Chinese (PCA0)
 ```{r}
-ggplot(data = df_chinese, aes(x = professions, y = gender_bias, fill = pos)) +
+pChinese_PCA0=ggplot(data = df_chinese, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
-  labs(title = "Profession Set (Chinese PCA0)",
+  labs(title = "Profession Set (Chinese)",
        y = "Bias Measure",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
@@ -412,12 +413,13 @@ ggplot(data = df_chinese, aes(x = professions, y = gender_bias, fill = pos)) +
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 )
+ggsave(file = "Professions_Chinese0.png", pChinese_PCA0)
 ```
 
 
 ## Use same settings in Farsi
 ```{r}
-ggplot(data = df_farsi, aes(x = professions, y = gender_bias, fill = pos)) +
+pFarsi=ggplot(data = df_farsi, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Farsi)",
@@ -430,11 +432,12 @@ ggplot(data = df_farsi, aes(x = professions, y = gender_bias, fill = pos)) +
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 )
+ggsave(file = "Professions_Farsi.png", pFarsi)
 ```
 
 ## Use same settings in Wolof
 ```{r}
-ggplot(data = df_wolof, aes(x = professions, y = gender_bias, fill = pos)) +
+pWolof= ggplot(data = df_wolof, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Wolof)",
@@ -447,6 +450,7 @@ ggplot(data = df_wolof, aes(x = professions, y = gender_bias, fill = pos)) +
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 )
+ggsave(file = "Professions_Wolof.png", pWolof)
 ```
 ### All languages
 
@@ -470,7 +474,7 @@ ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = pos)) +
 ### All languages (Weighted average)
 
 ```{r}
-ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill = pos)) +
+pAll=ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set Across Languages (Gender Bias Weighted Average By Word Count)f",
@@ -486,6 +490,7 @@ ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill = po
         axis.ticks.y=element_blank()
 ) +
  facet_wrap(~language, nrow = 3)
+ggsave(file = "Professions_All.png", pAll)
 ```
 
 # Put English, Chinese, Farsi, Wolof together
@@ -548,7 +553,7 @@ ggplot(data = df_gendered_languages_weighted, aes(x = professions, y = gender_bi
 #why are they sorted like they are?  how about alphabetical vs reverse alphabetical?
 #When I tried to use Spanish words, Things with accents are missing :-(
 ```{r}
-ggplot(data = df_spanish_all, aes(x = professions, y = gender_bias, fill = pos)) +
+pSpanish = ggplot(data = df_spanish_all, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Spanish)",
@@ -562,6 +567,7 @@ ggplot(data = df_spanish_all, aes(x = professions, y = gender_bias, fill = pos))
   plot.title = element_text(hjust = 0.5)
 ) +
  facet_wrap(~gender, nrow = 2)
+ggsave(file = "Professions_Spanish.png", pSpanish)
 ```
 
 
@@ -571,7 +577,7 @@ ggplot(data = df_spanish_all, aes(x = professions, y = gender_bias, fill = pos))
 # Graph of just the ones for gendered languages show each variant (just female, just male, just neutral) - FRENCH
 
 ```{r}
-ggplot(data = df_french_all, aes(x = professions, y = gender_bias, fill = pos)) +
+pFrench= ggplot(data = df_french_all, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (French)",
@@ -585,12 +591,13 @@ ggplot(data = df_french_all, aes(x = professions, y = gender_bias, fill = pos)) 
   plot.title = element_text(hjust = 0.5)
 ) +
  facet_wrap(~gender, nrow = 2)
+ggsave(file = "Professions_French.png", pFrench)
 ```
 
 
 # Graph of just the ones for gendered languages show each variant (just female, just male, just neutral) - GERMAN
 ```{r}
-ggplot(data = df_german_all, aes(x = professions, y = gender_bias, fill = pos)) +
+pGerman= ggplot(data = df_german_all, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (German)",
@@ -604,12 +611,13 @@ ggplot(data = df_german_all, aes(x = professions, y = gender_bias, fill = pos)) 
   plot.title = element_text(hjust = 0.5)
 ) +
  facet_wrap(~gender, nrow = 2)
+ggsave(file = "Professions_German.png", pGerman)
 ```
 
 
 # Graph of just the ones for gendered languages show each variant (just female, just male, just neutral) - ARABIC
 ```{r}
-ggplot(data = df_arabic_all, aes(x = professions, y = gender_bias, fill = pos)) +
+pArabic= ggplot(data = df_arabic_all, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Arabic)",
@@ -623,10 +631,11 @@ ggplot(data = df_arabic_all, aes(x = professions, y = gender_bias, fill = pos)) 
   plot.title = element_text(hjust = 0.5)
 ) +
  facet_wrap(~gender, nrow = 2)
+ggsave(file = "Professions_Arabic.png", pArabic)
 ```
 # Graph of just the ones for gendered languages show each variant (just female, just male, just neutral) - URDU
 ```{r}
-ggplot(data = df_urdu_all, aes(x = professions, y = gender_bias, fill = pos)) +
+pUrdu= ggplot(data = df_urdu_all, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Urdu)",
@@ -640,4 +649,5 @@ ggplot(data = df_urdu_all, aes(x = professions, y = gender_bias, fill = pos)) +
   plot.title = element_text(hjust = 0.5)
 ) +
  facet_wrap(~gender, nrow = 2)
+ggsave(file = "Professions_Urdu.png", pUrdu)
 ```
