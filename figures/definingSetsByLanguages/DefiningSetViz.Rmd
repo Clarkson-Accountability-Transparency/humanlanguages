@@ -220,10 +220,14 @@ p9
 
 # Arrange plot objects into a grid
 ```{r}
+<<<<<<< HEAD
 p_total <- grid.arrange(p1, p2, p3, p4, p5, p6, p7, p8, p9, nrow = 3)
 p_total
 ```
 ```{r}
 ggsave(file = "figure1.png", arrangeGrob(p1, p2, p3, p4, p5, p6, p7, p8, p9, ncol = 3))
+=======
+grid.arrange(p1, p2, p8, p4, p5, p6, p7,  nrow = 3)
+>>>>>>> 80c79ff45f55d34d728276f57055b8914ac5f447
 ```
 
