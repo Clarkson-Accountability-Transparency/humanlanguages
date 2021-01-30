@@ -19,9 +19,9 @@ library(readr)
 #In English, Spanish, French, German all profession words occur in the corpus
 df_english <- read_csv("english_results.csv")
 #df2 <- read_csv("arabic_results2.csv")
-df_spanish <- read_csv("spanish_results.csv")
-df_german <- read_csv("german_results.csv")
-df_french <- read_csv("french_results.csv")
+df_spanish <- read_csv("spanish_even.csv")
+df_german <- read_csv("german_even.csv")
+df_french <- read_csv("french_even.csv")
 
 #TODO-I'm not sure I am choosing the right Chinese results column
 df_chinese <- read_csv("chinese_results_pca0.csv")
@@ -31,12 +31,12 @@ df_chinese_pca1 <- read_csv("chinese_results_pca1.csv")
 df_farsi <- read_csv("farsi_results.csv")
 
 #in Arabic, filmmaker, astronaut and astronomer do not occur in the corpus
-df_arabic <- read_csv("arabic_results.csv")
+df_arabic <- read_csv("arabic_even.csv")
 
 #in Urdu comedian, adventurer, analyst, astronomer and biologist do not occur in the corpus
 #Also we have English words transcribed in Arabic character set for 9 words - could those be considered neutral words?
 #Only 2 female profession variants occur in the corpus - teacher and actor
-df_urdu <- read_csv("urdu_results.csv")
+df_urdu <- read_csv("urdu_even.csv")
 
 #In Wolof only two profession words - person and musician appear in the corpus
 df_wolof <- read_csv("wolof_results.csv")
@@ -454,7 +454,7 @@ ggplot(data = df_wolof, aes(x = professions, y = gender_bias, fill = pos)) +
 ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
-  labs(title = "Profession Set (All with Addition)",
+  labs(title = "Profession Set (All with Weighted Even)",
        y = "Bias Measure",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
