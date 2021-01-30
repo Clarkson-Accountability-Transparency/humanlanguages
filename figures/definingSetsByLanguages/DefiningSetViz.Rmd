@@ -220,6 +220,6 @@ p3
 
 # Arrange plot objects into a grid
 ```{r}
-grid.arrange(p1, p2, p8, p4, p5, p6, p7, nrow = 2)
+grid.arrange(p1, p2, p8, p4, p5, p6, p7,  nrow = 3)
 ```
 
