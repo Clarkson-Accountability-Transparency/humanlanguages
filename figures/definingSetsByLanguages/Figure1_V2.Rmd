@@ -28,6 +28,7 @@ chinese <- read_csv("chinese_defining_pca0.csv")
 #Re-order data by words
 chinese$words <- fct_inorder(chinese$words)
 
+
 pchinese <- ggplot(data = chinese, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
@@ -119,6 +120,7 @@ pFarsi
 str <- as.character(french$words) %>%
          strsplit("\\)")
 
+words <- vector()
 for (i in 1:length(str)) {
   words[i] <- str_replace(str[[i]][1], "\\(", "")
 }
