@@ -271,7 +271,7 @@ ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (English Only)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank())
 ```
 
@@ -282,7 +282,7 @@ ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (English Only)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2"))
 ```
@@ -293,7 +293,7 @@ ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (English Only)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3))
@@ -306,7 +306,7 @@ pEnglish=ggplot(data = df_english, aes(x = professions, y = gender_bias, fill = 
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (English)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -324,7 +324,7 @@ ggplot(data = df_spanish_weighted_simple, aes(x = professions, y = gender_bias, 
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Spanish)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -340,7 +340,7 @@ ggplot(data = df_french_weighted_simple, aes(x = professions, y = gender_bias, f
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (French)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -356,7 +356,7 @@ ggplot(data = df_german_weighted_simple, aes(x = professions, y = gender_bias, f
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (German)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -372,7 +372,7 @@ ggplot(data = df_arabic_weighted_simple, aes(x = professions, y = gender_bias, f
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Arabic)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -388,7 +388,7 @@ ggplot(data = df_urdu_weighted_simple, aes(x = professions, y = gender_bias, fil
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Urdu)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -404,7 +404,7 @@ pChinese_PCA0=ggplot(data = df_chinese, aes(x = professions, y = gender_bias, fi
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Chinese)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -423,7 +423,7 @@ pFarsi=ggplot(data = df_farsi, aes(x = professions, y = gender_bias, fill = pos)
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Farsi)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -441,9 +441,9 @@ pWolof= ggplot(data = df_wolof, aes(x = professions, y = gender_bias, fill = pos
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Wolof)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
-  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  scale_fill_manual(values = c( "firebrick2", "dodgerblue2")) +
   expand_limits(y = c(-.3, 0.3)) + 
   theme(
   legend.position = "none",
@@ -455,30 +455,11 @@ ggsave(file = "Professions_Wolof.png", pWolof)
 ### All languages
 
 ```{r}
-ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = pos)) +
+pAllEven=ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
-  labs(title = "Profession Set (All with Weighted Even)",
-       y = "Bias Measure",
-       x = element_blank()) +
-  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
-  expand_limits(y = c(-.3, 0.3)) + 
-  theme(
-  legend.position = "none",
-  text = element_text(family = "Gill Sans"),
-  plot.title = element_text(hjust = 0.5)
-) +
- facet_wrap(~language, nrow = 2)
-```
-
-### All languages (Weighted average)
-
-```{r}
-pAll=ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill = pos)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  labs(title = "Profession Set Across Languages (Gender Bias Weighted Average By Word Count)",
-       y = "Bias Measure",
+  labs(title = "Profession Sets Across All Languages (Weighted Evenly)",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -490,16 +471,38 @@ pAll=ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill
         axis.ticks.y=element_blank()
 ) +
  facet_wrap(~language, nrow = 3)
-ggsave(file = "Professions_All.png", pAll)
+ggsave(file = "Professions_AllEven.png", pAllEven)
+```
+
+### All languages (Weighted average)
+
+```{r}
+pAllWeighted=ggplot(data = df_total_weighted, aes(x = professions, y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Profession Sets Across All Languages (Weighted By Word Count)",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-.3, 0.3)) + 
+  theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5),
+  axis.text.y=element_blank(),
+        axis.ticks.y=element_blank()
+) +
+ facet_wrap(~language, nrow = 3)
+ggsave(file = "Professions_AllWeighted.png", pAllWeighted)
 ```
 
 # Put English, Chinese, Farsi, Wolof together
 ```{r}
-ggplot(data = df_nongendered_languages, aes(x = professions, y = gender_bias, fill = pos)) +
+pNonGendered= ggplot(data = df_nongendered_languages, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
-  labs(title = "Profession Sets (Non-Gendered Languages)",
-       y = "Bias Measure",
+  labs(title = "Languages Without Grammatically Gendered Nouns",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -509,6 +512,7 @@ ggplot(data = df_nongendered_languages, aes(x = professions, y = gender_bias, fi
   plot.title = element_text(hjust = 0.5)
 ) +
  facet_wrap(~language, nrow = 2)
+ggsave(file = "Professions_NonGendered.png", pNonGendered)
 ```
 
 # Put French, German, Spanish, Arabic together
@@ -518,7 +522,7 @@ ggplot(data = df_gendered_languages, aes(x = professions, y = gender_bias, fill 
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Sets (Gendered Languages - Weighted Equally)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -536,7 +540,7 @@ ggplot(data = df_gendered_languages_weighted, aes(x = professions, y = gender_bi
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Gendered Languages - Weighted Average)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -557,7 +561,7 @@ pSpanish = ggplot(data = df_spanish_all, aes(x = professions, y = gender_bias, f
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Spanish)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -581,7 +585,7 @@ pFrench= ggplot(data = df_french_all, aes(x = professions, y = gender_bias, fill
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (French)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -601,7 +605,7 @@ pGerman= ggplot(data = df_german_all, aes(x = professions, y = gender_bias, fill
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (German)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -621,7 +625,7 @@ pArabic= ggplot(data = df_arabic_all, aes(x = professions, y = gender_bias, fill
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Arabic)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
@@ -639,7 +643,7 @@ pUrdu= ggplot(data = df_urdu_all, aes(x = professions, y = gender_bias, fill = p
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Profession Set (Urdu)",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-.3, 0.3)) + 
