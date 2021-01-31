@@ -1,8 +1,8 @@
 professions,gender_bias,pos
 nurse,0.217431629,TRUE
 teacher,0.082112344,TRUE
-writer,-0.099785832,FALSE
-engineer,0.022365823,TRUE
+writer,-0.122656438,FALSE
+engineer,-0.027274702,FALSE
 scientist,-0.140122767,FALSE
 manager,-0.070294055,FALSE
 driver,0.084605356,TRUE

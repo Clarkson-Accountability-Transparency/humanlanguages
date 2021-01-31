@@ -1,8 +1,8 @@
 professions,Urdu,gender_bias,pos
 nurse,___,0.217431629,TRUE
 teacher,____,0.097063711,TRUE
-writer,_______,-0.076915227,FALSE
-engineer,,,FALSE
+writer,,,FALSE
+engineer,_______,-0.076915227,FALSE
 scientist,,,FALSE
 manager,______,-0.007173739,FALSE
 driver,_______,0.084605356,TRUE
