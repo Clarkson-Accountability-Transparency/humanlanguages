@@ -24,4 +24,4 @@ p <- ggplot(pca_df, aes(x = reorder(Language, Diff), y = Diff)) +
         axis.text = element_text(size = 14),
         axis.title = element_text(size= 14)) 
 
-ggsave("figure2.png", p)
+ggsave("figure2.png", p, height = 3, width = 5)
