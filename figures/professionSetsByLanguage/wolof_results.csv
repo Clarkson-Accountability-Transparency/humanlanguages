@@ -1,33 +1,33 @@
 professions,gender_bias,pos
-nurse (Missing),0,TRUE
-teacher (Missing),0,TRUE
-writer (Missing),0,TRUE
-engineer (Missing),0,TRUE
-scientist (Missing),0,TRUE
-manager (Missing),0,TRUE
-driver (Missing),0,TRUE
-banker (Missing),0,TRUE
+nurse,0,TRUE
+teacher,0,TRUE
+writer,0,TRUE
+engineer,0,TRUE
+scientist,0,TRUE
+manager,0,TRUE
+driver,0,TRUE
+banker,0,TRUE
 musician,0.20767658,TRUE
-artist (Missing),0,TRUE
-chef (Missing),0,TRUE
-filmmaker (Missing),0,TRUE
-judge (Missing),0,TRUE
-comedian (Missing),0,TRUE
-inventor (Missing),0,TRUE
-worker (Missing),0,TRUE
-soldier (Missing),0,TRUE
-journalist (Missing),0,TRUE
-student (Missing),0,TRUE
-athlete (Missing),0,TRUE
-actor (Missing),0,TRUE
-governor (Missing),0,TRUE
-farmer (Missing),0,TRUE
-person ,0.149326476,TRUE
-lawyer (Missing),0,TRUE
-adventurer (Missing),0,TRUE
-aide (Missing),0,TRUE
-ambassador (Missing),0,TRUE
-analyst (Missing),0,TRUE
-astronaut (Missing),0,TRUE
-astronomer (Missing),0,TRUE
-biologist (Missing),0,TRUE
+artist,0,TRUE
+chef,0,TRUE
+filmmaker,0,TRUE
+judge,0,TRUE
+comedian,0,TRUE
+inventor,0,TRUE
+worker,0,TRUE
+soldier,0,TRUE
+journalist,0,TRUE
+student,0,TRUE
+athlete,0,TRUE
+actor,0,TRUE
+governor,0,TRUE
+farmer,0,TRUE
+person,0.149326476,TRUE
+lawyer,0,TRUE
+adventurer,0,TRUE
+aide,0,TRUE
+ambassador,0,TRUE
+analyst,0,TRUE
+astronaut,0,TRUE
+astronomer,0,TRUE
+biologist,0,TRUE

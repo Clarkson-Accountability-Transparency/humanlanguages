@@ -10,14 +10,14 @@ banker,,,FALSE
 musician,,,FALSE
 artist,______,,FALSE
 chef,______,,FALSE
-filmmaker (Missing),,,FALSE
+filmmaker,,,FALSE
 judge,,,FALSE
 comedian,,,FALSE
 inventor,,,FALSE
 worker,,,FALSE
 soldier,,,FALSE
 journalist,,,FALSE
-student (Missing Male),_____,,FALSE
+student,_____,,FALSE
 athlete,,,FALSE
 actor,_______,0.370119011,TRUE
 governor,,,FALSE
@@ -28,6 +28,6 @@ adventurer,,,FALSE
 aide,,,FALSE
 ambassador,,,FALSE
 analyst,,,FALSE
-astronaut (Missing),,,FALSE
-astronomer (Missing),,,FALSE
+astronaut,,,FALSE
+astronomer,,,FALSE
 biologist,,,FALSE

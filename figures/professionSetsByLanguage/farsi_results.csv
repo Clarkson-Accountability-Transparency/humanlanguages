@@ -16,7 +16,7 @@ comedian,0.022857604,TRUE
 inventor,-0.177636026,FALSE
 worker,0.035342272,TRUE
 soldier,0.06774808,TRUE
-journalist (Missing),0,TRUE
+journalist,0,TRUE
 student,0.084213935,TRUE
 athlete,-0.010194248,FALSE
 actor,0.144109565,TRUE
@@ -29,5 +29,5 @@ aide,-0.030953453,FALSE
 ambassador,-0.010174631,FALSE
 analyst,-0.00624515,FALSE
 astronaut,0.01563631,TRUE
-astronomer (Missing),0,TRUE
-biologist (Missing),0,TRUE
+astronomer,0,TRUE
+biologist,0,TRUE
