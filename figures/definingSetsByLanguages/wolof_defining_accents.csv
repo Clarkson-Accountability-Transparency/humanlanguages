@@ -1,15 +1,15 @@
 words,gender_bias,pos
 (Jigéen) woman,0.533723473,TRUE
-(Goor) man,0.397310772,TRUE
-(Doom ju jigeen) daughter,0,TRUE
-(Doom ju goor) son,0,TRUE
+(Góor) man,0.397310772,TRUE
+(Doom ju jigéen) daughter,0,TRUE
+(Doom ju góor) son,0,TRUE
 (Yaay) mother,0.190850832,TRUE
 (Baay) father,0.765281786,TRUE
 (Janxa) girl,0,TRUE
-(Xale bu goor) boy,0,TRUE
+(Xale bu góor) boy,0,TRUE
 (Jabari buur) queen,0,TRUE
 (Buur) king,0.541209202,TRUE
 (Jabar) wife,0.244363318,TRUE
-(jekker) husband,0,TRUE
+(jëkkër) husband,0,TRUE
 (Ndawsi) madam,0,TRUE
-(Goorgui) sir,0,TRUE
+(Góorgui) sir,0,TRUE
