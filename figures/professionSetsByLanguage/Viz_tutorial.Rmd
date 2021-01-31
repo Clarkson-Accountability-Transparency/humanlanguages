@@ -443,7 +443,7 @@ pWolof= ggplot(data = df_wolof, aes(x = professions, y = gender_bias, fill = pos
   labs(title = "Profession Set (Wolof)",
        y = "Gender Bias",
        x = element_blank()) +
-  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  scale_fill_manual(values = c( "firebrick2", "dodgerblue2")) +
   expand_limits(y = c(-.3, 0.3)) + 
   theme(
   legend.position = "none",
@@ -458,7 +458,7 @@ ggsave(file = "Professions_Wolof.png", pWolof)
 pAllEven=ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
-  labs(title = "Profession Sets Across All Languages (All with Weighted Even)",
+  labs(title = "Profession Sets Across All Languages (Weighted Evenly)",
        y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
