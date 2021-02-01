@@ -251,114 +251,17 @@ library(gridExtra)</code></pre>
 <h1>Load data</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXJhYmljIDwtIHJlYWRfY3N2KFwiYXJhYmljX2RlZmluaW5nLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>arabic &lt;- read_csv(&quot;arabic_defining.csv&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXJhYmljIDwtIHJlYWRfY3N2KFwiYXJhYmljX2RlZmluaW5nLmNzdlwiKVxuZW5nbGlzaCA8LSByZWFkX2NzdihcImVuZ2xpc2hfZGVmaW5pbmcuY3N2XCIpXG5mYXJzaSA8LSByZWFkX2NzdihcImZhcnNpX2RlZmluaW5nLmNzdlwiKVxuZnJlbmNoIDwtIHJlYWRfY3N2KFwiZnJlbmNoX2RlZmluaW5nLmNzdlwiKVxuZ2VybWFuIDwtIHJlYWRfY3N2KFwiZ2VybWFuX2RlZmluaW5nLmNzdlwiKVxuc3BhbmlzaCA8LSByZWFkX2NzdihcInNwYW5pc2hfZGVmaW5pbmcuY3N2XCIpXG51cmR1IDwtIHJlYWRfY3N2KFwidXJkdV9kZWZpbmluZy5jc3ZcIilcbndvbG9mIDwtIHJlYWRfY3N2KFwid29sb2ZfZGVmaW5pbmcuY3N2XCIpXG5jaGluZXNlIDwtIHJlYWRfY3N2KFwiY2hpbmVzZV9kZWZpbmluZ19wY2EwLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>arabic &lt;- read_csv(&quot;arabic_defining.csv&quot;)
+english &lt;- read_csv(&quot;english_defining.csv&quot;)
+farsi &lt;- read_csv(&quot;farsi_defining.csv&quot;)
+french &lt;- read_csv(&quot;french_defining.csv&quot;)
+german &lt;- read_csv(&quot;german_defining.csv&quot;)
+spanish &lt;- read_csv(&quot;spanish_defining.csv&quot;)
+urdu &lt;- read_csv(&quot;urdu_defining.csv&quot;)
+wolof &lt;- read_csv(&quot;wolof_defining.csv&quot;)
+chinese &lt;- read_csv(&quot;chinese_defining_pca0.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZW5nbGlzaCA8LSByZWFkX2NzdihcImVuZ2xpc2hfZGVmaW5pbmcuY3N2XCIpXG5gYGAifQ== -->
-<pre class="r"><code>english &lt;- read_csv(&quot;english_defining.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmFyc2kgPC0gcmVhZF9jc3YoXCJmYXJzaV9kZWZpbmluZy5jc3ZcIilcbmBgYCJ9 -->
-<pre class="r"><code>farsi &lt;- read_csv(&quot;farsi_defining.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZnJlbmNoIDwtIHJlYWRfY3N2KFwiZnJlbmNoX2RlZmluaW5nLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>french &lt;- read_csv(&quot;french_defining.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2VybWFuIDwtIHJlYWRfY3N2KFwiZ2VybWFuX2RlZmluaW5nLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>german &lt;- read_csv(&quot;german_defining.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BhbmlzaCA8LSByZWFkX2NzdihcInNwYW5pc2hfZGVmaW5pbmcuY3N2XCIpXG5gYGAifQ== -->
-<pre class="r"><code>spanish &lt;- read_csv(&quot;spanish_defining.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudXJkdSA8LSByZWFkX2NzdihcInVyZHVfZGVmaW5pbmcuY3N2XCIpXG5gYGAifQ== -->
-<pre class="r"><code>urdu &lt;- read_csv(&quot;urdu_defining.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud29sb2YgPC0gcmVhZF9jc3YoXCJ3b2xvZl9kZWZpbmluZy5jc3ZcIilcbmBgYCJ9 -->
-<pre class="r"><code>wolof &lt;- read_csv(&quot;wolof_defining.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hpbmVzZSA8LSByZWFkX2NzdihcImNoaW5lc2VfZGVmaW5pbmdfcGNhMC5jc3ZcIilcbmBgYCJ9 -->
-<pre class="r"><code>chinese &lt;- read_csv(&quot;chinese_defining_pca0.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIHdvcmRzID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIGdlbmRlcl9iaWFzID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIHBvcyA9IFx1MDAxYlszM21jb2xfbG9naWNhbCgpXHUwMDFiWzM5bVxuKVxuIn0= -->
-<pre><code>
-[36m──[39m [1m[1mColumn specification[1m[22m [36m─────────────────────────────────────────────────────────────────────────────[39m
-cols(
-  words = [31mcol_character()[39m,
-  gender_bias = [32mcol_double()[39m,
-  pos = [33mcol_logical()[39m
-)</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>

@@ -260,6 +260,8 @@ df_maply <- df_maply %>% select(-professions)
 
 heatmaply(
   df_maply, 
+  xlab = "Language",
+  main = "Profession Set (Weighted Evenly)",
   scale_fill_gradient_fun = ggplot2::scale_fill_gradientn(
     colors = c("blue","white","red"),
     values=rescale(c(-0.4,0,0.4)),
@@ -293,3 +295,55 @@ heatmaply(
 )
 
 #########################################################################################
+
+## Weighted average 
+
+df_maply <- df_total_weighted %>% 
+  select(-pos) %>%
+  spread(language, gender_bias)
+
+df_maply <- as.data.frame(df_maply)
+
+row.names(df_maply) <- df_maply$professions
+
+df_maply <- df_maply %>% select(-professions)
+
+heatmaply(
+  df_maply, 
+  scale_fill_gradient_fun = ggplot2::scale_fill_gradientn(
+    colors = c("blue","white","red"),
+    values=rescale(c(-0.4,0,0.4)),
+    limits=c(-0.4,0.4),
+    row
+  )
+)
+
+######################################################################################################
+
+## Taking Out Wolof and Chinese
+
+df_total_weighted2 <-  rbind(df_english, df_arabic_weighted_simple, df_farsi,
+                             df_french_weighted_simple, df_urdu_weighted_simple, 
+                             df_spanish_weighted_simple, df_german_weighted_simple)
+
+df_maply <- df_total_weighted2 %>% 
+  select(-pos) %>%
+  spread(language, gender_bias)
+
+df_maply <- as.data.frame(df_maply)
+
+row.names(df_maply) <- df_maply$professions
+
+df_maply <- df_maply %>% select(-professions)
+
+heatmaply(
+  df_maply, 
+  xlab = "Language",
+  main = "Profession Set (Weighted Average)",
+  scale_fill_gradient_fun = ggplot2::scale_fill_gradientn(
+    colors = c("blue","white","red"),
+    values=rescale(c(-0.4,0,0.4)),
+    limits=c(-0.4,0.4)
+  )
+)
+
