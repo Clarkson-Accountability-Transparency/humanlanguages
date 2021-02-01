@@ -1,0 +1,7 @@
+﻿corpora,gender_bias,pos
+Chinese Wikipedia,0.083015379,TRUE
+Chinese Classics,-0.148879906,FALSE
+Spanish Wikipedia,0.015150863,TRUE
+Spanish Classics,0.174712691,TRUE
+English Wikipedia,-0.037757023,FALSE
+English Classics,0.274888725,TRUE
