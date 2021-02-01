@@ -1,0 +1,86 @@
+---
+title: "Viz Tutorial"
+output: html_notebook
+---
+
+#Tutorial
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+```
+
+
+## Read Data
+
+```{r}
+
+df_wikipedia_weighted <- read_csv("wikipedia_weighted.csv")
+df_wikipedia_classics <- read_csv("wikipedia_v_classics.csv")
+```
+
+```{r}
+df_wikipedia_weighted$language <- fct_rev(df_wikipedia_weighted$language)
+```
+
+```{r}
+
+ggplot(data = df_wikipedia_weighted, aes(x = gender_bias, y = ordered(language), fill=pos)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Gender Bias By Language (Wikipedia)",
+       x = "Gender Bias",
+       y = element_blank())+
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  #scale_x_discrete(labels = seq(from = -1, to = 1, by= 0.1), 
+  #                 breaks = seq(from = -1, to = 1, by= 0.1),
+  #                 limits = seq(from = -1, to = 1, by= 0.1)) +
+  expand_limits(x = c(-0.10, 0.16))+
+  theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+  )
+```
+
+### Mess with "Theme" (delete legend, change font, center title) - FINAL VERSION in ENGLISH?
+```{r}
+pWikipediaWeighted= ggplot(data = df_wikipedia_weighted, aes(x = gender_bias, y = ordered(language), fill=pos)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Gender Bias By Language (Wikipedia)",
+       x = "Gender Bias",
+       y = element_blank())+
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  #scale_x_discrete(labels = seq(from = -1, to = 1, by= 0.1), 
+  #                 breaks = seq(from = -1, to = 1, by= 0.1),
+  #                 limits = seq(from = -1, to = 1, by= 0.1)) +
+  expand_limits(x = c(-0.10, 0.16)) +
+  theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+  )
+ggsave(file = "Wikipedia_Weighted.png", pWikipediaWeighted)
+```
+```{r}
+df_wikipedia_classics$corpora <- fct_rev(df_wikipedia_classics$corpora)
+```
+
+```{r}
+
+ggplot(data = df_wikipedia_classics, aes(x = gender_bias, y = ordered(corpora), fill=pos)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Gender Bias for Wikipedia and Classics Corpora",
+       x = "Gender Bias",
+       y = element_blank())+
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  #scale_x_discrete(labels = seq(from = -1, to = 1, by= 0.1), 
+  #                 breaks = seq(from = -1, to = 1, by= 0.1),
+  #                 limits = seq(from = -1, to = 1, by= 0.1)) +
+  expand_limits(x = c(-0.10, 0.16))+
+  theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+  )
+```
