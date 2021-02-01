@@ -306,7 +306,7 @@ total_df$words <- words
 
 ## Create new viz
 ```{r}
-ggplot(data = total_df, aes(x = words, y = gender_bias, fill = pos)) +
+v3 <- ggplot(data = total_df, aes(x = words, y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Defining Sets Across All Languages (Weighted By Word Count)",
@@ -317,9 +317,8 @@ ggplot(data = total_df, aes(x = words, y = gender_bias, fill = pos)) +
   theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
-  plot.title = element_text(hjust = 0.5),
-  axis.text.y=element_blank(),
-        axis.ticks.y=element_blank()
+  plot.title = element_text(hjust = 0.5)
+
 ) +
  facet_wrap(~language, nrow = 3)
 ```
@@ -327,6 +326,6 @@ ggplot(data = total_df, aes(x = words, y = gender_bias, fill = pos)) +
 # Save Version 3
 
 ```{r}
-
+ggsave(file = "figure1_V3.png", v3)
 ```
 
