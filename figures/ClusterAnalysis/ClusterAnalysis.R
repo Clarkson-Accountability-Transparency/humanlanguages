@@ -224,6 +224,8 @@ df_chinese_all <-rbind(df_chinese_pca0, df_chinese_pca1)
 
 ####################################################################################################
 
+
+
 #All languages weighted evenly 
 df_maply <- df_total %>% 
   select(-pos) %>%
@@ -346,4 +348,6 @@ heatmaply(
     limits=c(-0.4,0.4)
   )
 )
+
+
 

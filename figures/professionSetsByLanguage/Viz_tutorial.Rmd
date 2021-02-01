@@ -471,6 +471,7 @@ pAllEven=ggplot(data = df_total, aes(x = professions, y = gender_bias, fill = po
         axis.ticks.y=element_blank()
 ) +
  facet_wrap(~language, nrow = 3)
+pAllEven
 ggsave(file = "Professions_AllEven.png", pAllEven)
 ```
 
