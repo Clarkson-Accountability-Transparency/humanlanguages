@@ -224,7 +224,43 @@ df_chinese_all <-rbind(df_chinese_pca0, df_chinese_pca1)
 
 ####################################################################################################
 
+## Defining Sets
 
+arabic <- read_csv("../definingSetsByLanguages/arabic_defining.csv")
+english <- read_csv("../definingSetsByLanguages/english_defining.csv")
+farsi <- read_csv("../definingSetsByLanguages/farsi_defining.csv")
+french <- read_csv("../definingSetsByLanguages/french_defining.csv")
+german <- read_csv("../definingSetsByLanguages/german_defining.csv")
+spanish <- read_csv("../definingSetsByLanguages/spanish_defining.csv")
+urdu <- read_csv("../definingSetsByLanguages/urdu_defining.csv")
+wolof <- read_csv("../definingSetsByLanguages/wolof_defining.csv")
+chinese <- read_csv("../definingSetsByLanguages/chinese_defining_pca0.csv")
+
+words <- rep(english$words, times=9, each=1)
+
+chinese <- chinese %>%
+  mutate(language = "Chinese")
+english <- english %>%
+  mutate(language = "English")
+spanish <- spanish %>%
+  mutate(language = "Spanish")
+french <- french %>% 
+  mutate(language = "French")
+farsi <- farsi %>%
+  mutate(language = "Farsi")
+urdu <- urdu %>%
+  mutate(language = "Urdu")
+wolof <- wolof %>%
+  mutate(language = "Wolof")
+german <- german %>%
+  mutate(language = "German")
+arabic <- arabic %>%
+  mutate(language = "Arabic")
+total_df <- rbind(chinese, english, spanish, french, farsi, urdu, wolof, german, arabic)
+total_df$words <- words
+
+
+####################################################################################################
 
 #All languages weighted evenly 
 df_maply <- df_total %>% 
@@ -350,4 +386,55 @@ heatmaply(
 )
 
 
+
+##########################################
+
+
+df_maply <- total_df %>% 
+  select(-pos) %>%
+  spread(language, gender_bias)
+
+df_maply <- as.data.frame(df_maply)
+
+row.names(df_maply) <- df_maply$words
+
+df_maply <- df_maply %>% select(-words)
+
+heatmaply(
+  df_maply, 
+  xlab = "Language",
+  main = "Defining Set",
+  scale_fill_gradient_fun = ggplot2::scale_fill_gradientn(
+    colors = c("blue","white","red"),
+    values=rescale(c(-0.4,0,0.4)),
+    limits=c(-0.4,0.4)
+  )
+)
+
+## Without Chinese and Wolof 
+
+total_df2 <- rbind( english, spanish, french, farsi, urdu, german, arabic)
+words <- rep(english$words, times=7, each=1)
+total_df2$words <- words
+
+df_maply <- total_df2 %>% 
+  select(-pos) %>%
+  spread(language, gender_bias)
+
+df_maply <- as.data.frame(df_maply)
+
+row.names(df_maply) <- df_maply$words
+
+df_maply <- df_maply %>% select(-words)
+
+heatmaply(
+  df_maply, 
+  xlab = "Language",
+  main = "Defining Set",
+  scale_fill_gradient_fun = ggplot2::scale_fill_gradientn(
+    colors = c("blue","white","red"),
+    values=rescale(c(-.7,0,0.7)),
+    limits=c(-0.7,0.7)
+  )
+)
 
