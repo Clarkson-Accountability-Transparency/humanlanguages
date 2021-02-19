@@ -1,15 +1,15 @@
-words,gender_bias,pos
-"(mujer), woman",0.4607290865,TRUE
-"(hombre), man",-0.209848696,FALSE
-"(hija), daughter",0.2656406141,TRUE
-"(hijo), son",-0.19177806,FALSE
-"(madre), mother",0.3369907516,TRUE
-"(padre), father",-0.1081766833,FALSE
-"(niña), girl",0.4509952273,TRUE
-"(niño), boy",-0.08278738834,FALSE
-"(reina), queen",0.4164722046,TRUE
-"(rey), king",-0.2836764177,FALSE
-"(esposa), wife",0.3285182922,TRUE
-"(esposo), husband",0.07813668752,TRUE
-"(señora), madam",0.4074694743,TRUE
-"(señor), sir",-0.188767399,FALSE
+words,gender_bias,pos,expected_gender
+"(mujer), woman",0.460729087,TRUE,F
+"(hombre), man",-0.209848696,FALSE,M
+"(hija), daughter",0.265640614,TRUE,F
+"(hijo), son",-0.19177806,FALSE,M
+"(madre), mother",0.336990752,TRUE,F
+"(padre), father",-0.108176683,FALSE,M
+"(niña), girl",0.450995227,TRUE,F
+"(niño), boy",-0.082787388,FALSE,M
+"(reina), queen",0.416472205,TRUE,F
+"(rey), king",-0.283676418,FALSE,M
+"(esposa), wife",0.328518292,TRUE,F
+"(esposo), husband",0.078136688,TRUE,M
+"(señora), madam",0.407469474,TRUE,F
+"(señor), sir",-0.188767399,FALSE,M

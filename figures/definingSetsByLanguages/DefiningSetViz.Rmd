@@ -28,20 +28,20 @@ chinese <- read_csv("chinese_defining_pca0.csv")
 #Re-order data by words
 chinese$words <- fct_inorder(chinese$words)
 
-p1 <- ggplot(data = chinese, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_Chinese <- ggplot(data = chinese, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Chinese",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-0.8,0.8))
-p1 <- p1 + theme(
+p_Chinese <- p_Chinese + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p1
+p_Chinese
 
 ```
 
@@ -50,20 +50,20 @@ p1
 #Re-order data by words
 arabic$words <- fct_inorder(arabic$words)
 
-p2 <- ggplot(data = arabic, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_Arabic <- ggplot(data = arabic, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Arabic",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-0.8,0.8))
-p2 <- p2 + theme(
+p_Arabic <- p_Arabic + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p2
+p_Arabic
 
 ```
 
@@ -73,20 +73,20 @@ p2
 #Re-order by defining set
 english$words <- fct_inorder(english$words)
 
-p3 <- ggplot(data = english, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_English <- ggplot(data = english, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "English",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
 expand_limits(y = c(-0.8,0.8))
-p3 <- p3 + theme(
+p_English <- p_English + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p3
+p_English
 ```
 
 # Farsi
@@ -94,20 +94,20 @@ p3
 ```{r}
 farsi$words <- fct_inorder(farsi$words)
 
-p4 <- ggplot(data = farsi, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_Farsi <- ggplot(data = farsi, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Farsi",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-0.8,0.8))
-p4 <- p4 + theme(
+p_Farsi <- p_Farsi + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p4
+p_Farsi
 
 
 ```
@@ -117,40 +117,40 @@ p4
 ```{r}
 
 french$words <- fct_inorder(french$words)
-p5 <- ggplot(data = french, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_French <- ggplot(data = french, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "French",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
  expand_limits(y = c(-0.8,0.8))
-p5 <- p5 + theme(
+p_French  <-p_French  + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p5
+p_French 
 ```
 
 # German
 ```{r}
 german$words <- fct_inorder(german$words)
 
-p6 <- ggplot(data = german, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_German <- ggplot(data = german, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "German",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
   expand_limits(y = c(-0.8,0.8))
-p6 <- p6 + theme(
+p_German <- p_German + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p6
+p_German
 
 ```
 
@@ -158,40 +158,40 @@ p6
 ```{r}
 spanish$words <- fct_inorder(spanish$words)
 
-p7 <- ggplot(data = spanish, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_Spanish <- ggplot(data = spanish, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Spanish",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
 expand_limits(y = c(-0.8,0.8))
-p7 <- p7 + theme(
+p_Spanish  <- p_Spanish  + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p7
+p_Spanish 
 ```
 
 # Urdu 
 ```{r}
 urdu$words <- fct_inorder(urdu$words)
 
-p8 <- ggplot(data = urdu, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_Urdu <- ggplot(data = urdu, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Urdu",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
   scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
 expand_limits(y = c(-0.8,0.8))
-p8 <- p8 + theme(
+p_Urdu  <- p_Urdu  + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p8
+p_Urdu 
 
 
 ```
@@ -200,20 +200,20 @@ p8
 ```{r}
 wolof$words <- fct_inorder(wolof$words)
 
-p9 <- ggplot(data = wolof, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+p_Wolof <- ggplot(data = wolof, aes(x = ordered(words), y = gender_bias, fill = pos)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Wolof",
-       y = "Bias Measure",
+       y = "Gender Bias",
        x = element_blank()) +
-  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  scale_fill_manual(values = c( "firebrick2", "dodgerblue2")) +
 expand_limits(y = c(-0.8,0.8))
-p9 <- p9 + theme(
+p_Wolof  <- p_Wolof  + theme(
   legend.position = "none",
   text = element_text(family = "Gill Sans"),
   plot.title = element_text(hjust = 0.5)
 ) 
-p9
+p_Wolof 
 
 
 ```
@@ -221,11 +221,215 @@ p9
 # Arrange plot objects into a grid
 ```{r}
 
-p_total <- grid.arrange(p1, p2, p3, p4, p5, p6, p7, p8, p9, nrow = 3)
+p_total <- grid.arrange(p_Chinese, p_English, p_Spanish, p_Arabic, p_German, p_French, p_Farsi, p_Urdu, p_Wolof, nrow = 3)
 p_total
 ```
 ```{r}
-ggsave(file = "figure1.png", arrangeGrob(p1, p2, p3, p4, p5, p6, p7, p8, p9, ncol = 3))
+ggsave(file = "DefiningSet_pairsTogether.png", arrangeGrob(p_Chinese, p_English, p_Spanish, p_Arabic, p_German, p_French, p_Farsi, p_Urdu, p_Wolof, ncol = 3))
 
 ```
 
+# Chinese By Gender
+```{r}
+#Re-order data by words
+chinese$expected_gender <- fct_inorder(chinese$expected_gender)
+
+p_ChineseGenderSummary <- ggplot(data = chinese, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Chinese ",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p_ChineseGenderSummary <- p_ChineseGenderSummary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_ChineseGenderSummary
+
+```
+
+# Arabic
+```{r}
+#Re-order data by words
+arabic$expected_gender <- fct_inorder(arabic$expected_gender)
+
+p_ArabicGenderSummary <- ggplot(data = arabic, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Arabic",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p_ArabicGenderSummary <- p_ArabicGenderSummary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_ArabicGenderSummary
+
+```
+
+# English
+```{r}
+
+#Re-order by defining set
+english$expected_gender <- fct_inorder(english$expected_gender)
+
+p_EnglishGenderSummary <- ggplot(data = english, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "English",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+expand_limits(y = c(-0.8,0.8))
+p_EnglishGenderSummary <-p_EnglishGenderSummary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_EnglishGenderSummary
+```
+
+# Farsi
+
+```{r}
+farsi$expected_gender <- fct_inorder(farsi$expected_gender)
+
+p_FarsiGenderSummary <- ggplot(data = farsi, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Farsi",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p_FarsiGenderSummary <- p_FarsiGenderSummary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_FarsiGenderSummary
+
+
+```
+
+# French
+
+```{r}
+
+french$expected_gender <- fct_inorder(french$expected_gender)
+p_FrenchGenderSummmary <- ggplot(data = french, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "French",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+ expand_limits(y = c(-0.8,0.8))
+p_FrenchGenderSummmary <- p_FrenchGenderSummmary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_FrenchGenderSummmary
+```
+
+# German
+```{r}
+german$expected_gender <- fct_inorder(german$expected_gender)
+
+p_GermanGenderSummmary <- ggplot(data = german, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "German",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p_GermanGenderSummmary <- p_GermanGenderSummmary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_GermanGenderSummmary
+
+```
+
+#Spanish
+```{r}
+spanish$expected_gender <- fct_inorder(spanish$expected_gender)
+
+p_SpanishGenderSummmary <- ggplot(data = spanish, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Spanish",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+expand_limits(y = c(-0.8,0.8))
+p_SpanishGenderSummmary <- p_SpanishGenderSummmary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_SpanishGenderSummmary
+```
+
+# Urdu 
+```{r}
+urdu$expected_gender <- fct_inorder(urdu$expected_gender)
+
+p_UrduGenderSummmary <- ggplot(data = urdu, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Urdu",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+expand_limits(y = c(-0.8,0.8))
+p_UrduGenderSummmary <- p_UrduGenderSummmary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_UrduGenderSummmary
+
+
+```
+
+# Wolof
+```{r}
+wolof$expected_gender <- fct_inorder(wolof$expected_gender)
+
+p_WolofGenderSummmary <- ggplot(data = wolof, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Wolof",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "firebrick2", "dodgerblue2")) +
+expand_limits(y = c(-0.8,0.8))
+p_WolofGenderSummmary <- p_WolofGenderSummmary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_WolofGenderSummmary
+
+
+```
+
+# Arrange plot objects into a grid
+```{r}
+
+p_DefiningSetGenderSummary <- grid.arrange(p_ChineseGenderSummary, p_SpanishGenderSummmary, p_EnglishGenderSummary, p_ArabicGenderSummary, p_GermanGenderSummmary, p_FrenchGenderSummmary, p_FarsiGenderSummary, p_UrduGenderSummmary, p_WolofGenderSummmary, nrow = 3)
+p_DefiningSetGenderSummary
+```
+```{r}
+ggsave(file = "DefiningSet_GenderSummary.png", arrangeGrob(p_ChineseGenderSummary, p_SpanishGenderSummmary, p_EnglishGenderSummary, p_ArabicGenderSummary, p_GermanGenderSummmary, p_FrenchGenderSummmary, p_FarsiGenderSummary, p_UrduGenderSummmary, p_WolofGenderSummmary, ncol = 3))
+```

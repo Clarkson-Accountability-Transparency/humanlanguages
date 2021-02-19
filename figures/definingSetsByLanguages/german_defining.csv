@@ -1,15 +1,15 @@
-words,gender_bias,pos
-(Frau) woman,0.2938476179,TRUE
-(Mann) man,-0.1252128325,FALSE
-(Tochter) daughter,0.2093447454,TRUE
-(Sohn) son,-0.2316364114,FALSE
-(Mutter) mother,0.2551046797,TRUE
-(Vater) father,-0.1942557506,FALSE
-(Mädchen) girl,0.2362791927,TRUE
- (Junge) boy,0.07018731306,TRUE
-(Königin) queen,0.4024312821,TRUE
-(König) king,-0.1233598816,FALSE
-(Ehefrau) wife,0.2189493197,TRUE
-(Ehemann) husband,0.0148036756,TRUE
-(Dame) madam,0.5130872345,TRUE
-(Herr) sir,-0.2668149584,FALSE
+words,gender_bias,pos,expected_gender
+(Frau) woman,0.293847618,TRUE,F
+(Mann) man,-0.125212833,FALSE,M
+(Tochter) daughter,0.209344745,TRUE,F
+(Sohn) son,-0.231636411,FALSE,M
+(Mutter) mother,0.25510468,TRUE,F
+(Vater) father,-0.194255751,FALSE,M
+(Mädchen) girl,0.236279193,TRUE,F
+ (Junge) boy,0.070187313,TRUE,M
+(Königin) queen,0.402431282,TRUE,F
+(König) king,-0.123359882,FALSE,M
+(Ehefrau) wife,0.21894932,TRUE,F
+(Ehemann) husband,0.014803676,TRUE,M
+(Dame) madam,0.513087235,TRUE,F
+(Herr) sir,-0.266814958,FALSE,M
