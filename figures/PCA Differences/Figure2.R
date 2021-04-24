@@ -2,7 +2,7 @@
 
 library(readr)
 
-pca_df <- read_csv("~/Documents/GitHub/humanlanguages/figures/Figure 2/PCA_results.csv")
+pca_df <- read_csv("PCA_results.csv")
 names(pca_df) <- c("Language", "PCA [0]", "PCA [1]", "Diff")
 
 

@@ -8,8 +8,6 @@ output: html_notebook
 library(readr)
 library(ggplot2)
 library(gridExtra)
-library(forcats)
-library(stringr)
 ```
 
 # Load data
@@ -276,5 +274,58 @@ p_total
 ```
 ```{r}
 ggsave(file = "figure1_V2.png", arrangeGrob(pchinese,pSpanish,  pEnglish, pArabic, pGerman, pFrench, pFarsi, pUrdu, pWolof, ncol = 3))
+
+```
+## Combine data
+
+```{r}
+words <- rep(english$words, times=9, each=1)
+
+chinese <- chinese %>%
+  mutate(language = "Chinese")
+english <- english %>%
+  mutate(language = "English")
+spanish <- spanish %>%
+  mutate(language = "Spanish")
+french <- french %>% 
+  mutate(language = "French")
+farsi <- farsi %>%
+  mutate(language = "Farsi")
+urdu <- urdu %>%
+  mutate(language = "Urdu")
+wolof <- wolof %>%
+  mutate(language = "Wolof")
+german <- german %>%
+  mutate(language = "German")
+arabic <- arabic %>%
+  mutate(language = "Arabic")
+total_df <- rbind(chinese, english, spanish, french, farsi, urdu, wolof, german, arabic)
+total_df$words <- words
+```
+
+
+## Create new viz
+```{r}
+v3 <- ggplot(data = total_df, aes(x = words, y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Defining Sets Across All Languages (Weighted By Word Count)",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-.3, 0.3)) + 
+  theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+
+) +
+ facet_wrap(~language, nrow = 3)
+```
+
+# Save Version 3
+
+```{r}
+ggsave(file = "figure1_V3.png", v3)
 ```
 
