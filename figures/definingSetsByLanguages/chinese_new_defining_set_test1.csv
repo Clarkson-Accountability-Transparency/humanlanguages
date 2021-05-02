@@ -1,0 +1,5 @@
+words,gender_bias,pos,expected_gender
+mother,0.448292679,TRUE,F
+father,-0.204885838,FALSE,M
+woman,0.031100358,TRUE,F
+man,-0.045233197,FALSE,M

@@ -1,0 +1,70 @@
+---
+title: "Figure 1"
+output: html_notebook
+---
+
+# load libraries
+```{r}
+library(readr)
+library(ggplot2)
+library(gridExtra)
+library(cluster)
+library(forcats)
+```
+
+# Load data
+
+```{r}
+
+#chinese <- read_csv("chinese_definingset_1of6.csv")
+#chinese <- read_csv("chinese_definingset_2of6.csv")
+#chinese <- read_csv("chinese_definingset_3of6.csv")
+#chinese <- read_csv("chinese_definingset_4of6.csv")
+chinese <- read_csv("chinese_definingset_5of6.csv")
+#chinese <- read_csv("chinese_definingset_6of6.csv")
+```
+# Chinese
+```{r}
+#Re-order data by words
+chinese$words <- fct_inorder(chinese$words)
+
+p_Chinese <- ggplot(data = chinese, aes(x = ordered(words), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Chinese",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p_Chinese <- p_Chinese + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_Chinese
+
+```
+
+# Chinese By Gender
+```{r}
+#Re-order data by words
+chinese$expected_gender <- fct_inorder(chinese$expected_gender)
+
+p_ChineseGenderSummary <- ggplot(data = chinese, aes(x = ordered(expected_gender), y = gender_bias, fill = pos)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Chinese ",
+       y = "Gender Bias",
+       x = element_blank()) +
+  scale_fill_manual(values = c( "dodgerblue2", "firebrick2")) +
+  expand_limits(y = c(-0.8,0.8))
+p_ChineseGenderSummary <- p_ChineseGenderSummary + theme(
+  legend.position = "none",
+  text = element_text(family = "Gill Sans"),
+  plot.title = element_text(hjust = 0.5)
+) 
+p_ChineseGenderSummary
+
+```
+
+

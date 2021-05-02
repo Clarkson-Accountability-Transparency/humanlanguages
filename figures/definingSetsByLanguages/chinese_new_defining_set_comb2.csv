@@ -1,0 +1,5 @@
+words,gender_bias,pos,expected_gender
+mother,-0.066225373,FALSE,F
+father,-0.134319067,FALSE,M
+queen,0.495182366,TRUE,F
+king,-0.482096732,FALSE,M

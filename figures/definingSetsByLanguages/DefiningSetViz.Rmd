@@ -24,6 +24,11 @@ spanish <- read_csv("spanish_defining.csv")
 urdu <- read_csv("urdu_defining.csv")
 wolof <- read_csv("wolof_defining.csv")
 chinese <- read_csv("chinese_defining_pca0.csv")
+#chinese <- read_csv("chinese_new_defining_set_comb2.csv")
+#chinese <- read_csv("chinese_new_defining_set_comb7.csv")
+#chinese <- read_csv("chinese_new_defining_set_comb9.csv")
+#chinese <- read_csv("chinese_new_defining_set_comb11.csv")
+#chinese <- read_csv("chinese_new_defining_set_test1.csv")
 ```
 # Chinese
 ```{r}

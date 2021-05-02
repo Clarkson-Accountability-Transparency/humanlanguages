@@ -1,0 +1,15 @@
+words,gender_bias,pos,expected_gender
+woman,-0.0148303,FALSE,F
+man,-0.0462917,FALSE,M
+daughter,0.04200624,TRUE,F
+son,0.07240268,TRUE,M
+mother,-0.0372135,FALSE,F
+father,0.049205937,TRUE,M
+girl,-0.1279466,FALSE,F
+boy,0.02281564,TRUE,M
+queen,0.1776129,TRUE,F
+king,0.07626182,TRUE,M
+wife,-0.0069024,FALSE,F
+husband,-0.0183355,FALSE,M
+madam,-0.0557898,FALSE,F
+sir,0.05342203,FALSE,M
