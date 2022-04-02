@@ -44,8 +44,13 @@ import yaml
 
 #local libraries
 
-MODELS = "/home/tmiddlet_/languages/data/models/"
-PAIRS = "/home/tmiddlet_/languages/script/PAIRS/"
+#MODELS = "/home/tmiddlet_/languages/data/models/"
+#PAIRS = "/home/tmiddlet_/languages/script/PAIRS/"
+
+# To get the paths of the current working directory.
+cwd = os.getcwd()
+MODELS = str(cwd) + "/models/"
+PAIRS = str(cwd) + "/PAIRS/"
 
 #class languagesCSV(csv):
 #    def __init__(self, *args, **kwargs):
