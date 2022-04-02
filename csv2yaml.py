@@ -99,7 +99,8 @@ def convert_word_pair_to_yaml(csvFilename, yamlDir=''):
         languageData[lang]['word_pairs'] = [languageData[lang]['word_pairs'][pair] for pair in languageData[lang]['word_pairs']]
         print(languageData[lang])
         with open(os.path.join(yamlDir, 'pair_{}.yaml'.format(lang)), 'wb') as yamlFile:
-            yaml.dump(languageData[lang], yamlFile, encoding='utf-16-le', allow_unicode=True)
+            #yaml.dump(languageData[lang], yamlFile, encoding='utf-16-le', allow_unicode=True)
+            yaml.dump(languageData[lang], yamlFile, encoding="utf-8", allow_unicode=True)
 
 
 def convert_sets_to_yaml(csvFilename, yamlDir=''):
@@ -136,7 +137,8 @@ def convert_sets_to_yaml(csvFilename, yamlDir=''):
         print(lang)
         #TODO should check for special characters or spaces (spaces = '_'?)
         with open(os.path.join(yamlDir, '{}.yaml'.format(lang)), 'wb') as yamlFile:
-            yaml.dump(languageData[lang], yamlFile, encoding='utf-16-le', allow_unicode=True)
+            #yaml.dump(languageData[lang], yamlFile, encoding='utf-16-le', allow_unicode=True)
+            yaml.dump(languageData[lang], yamlFile, encoding='utf-8', allow_unicode=True)
 
 def convert_sets_to_newcsv(csvFilename, yamlDir=''):
     #This converts data from the Definig Sets spreadsheet format (See above)
