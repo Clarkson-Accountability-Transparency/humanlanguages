@@ -95,7 +95,9 @@ def main(yamlFilename):
     logging.info(f'Processing "{yamlFilename}"')
     with open(yamlFilename, 'rb') as yamlFile:
         #ASSUME that we are using a safe source for yaml.
-        data=yaml.load(yamlFile)
+        #data=yaml.load(yamlFile)
+        data=yaml.load(yamlFile, Loader=yaml.FullLoader)
+        
         #DEBUG:
         logging.debug(data)
 
