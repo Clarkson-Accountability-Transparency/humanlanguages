@@ -1,4 +1,4 @@
-﻿words,gender-bias,pos,expected_gender
+﻿words,gender_bias,pos,expected_gender
 woman,-0.094680819,FALSE,F
 man,0.415164853,TRUE,M
 daughter,-0.142384465,FALSE,F
