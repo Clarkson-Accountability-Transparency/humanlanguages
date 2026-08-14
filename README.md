@@ -35,8 +35,14 @@ Wikipedia, this repository gives you two step-by-step guides to start from:
   the same using a newspaper archive, a literary corpus, or another non-Wikipedia
   source of text.
 
-Each workbook is written to be language-agnostic, so you can follow it for whichever
+  Each workbook is written to be language-agnostic, so you can follow it for whichever
 language you are working with.
+
+You can also find other related materials including:
+- **[Defining Sets ](yamls)** — suggested defining set pairs and neutral words for a variety of languages in yaml
+- **[Other Scripts](script) and [Figures](figures)** related to our work
+
+
 
 ## Where this comes from
 
