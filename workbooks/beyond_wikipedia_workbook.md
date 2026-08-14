@@ -1,34 +1,22 @@
 # Beyond Wikipedia Workbook
 
-This workbook walks through measuring gender bias using a corpus other than
-Wikipedia. It covers two paths: building a corpus from a **newspaper archive**, and
-building a corpus from a **literary source like Wikisource**. It generalizes the
-steps used for a Bengali newspaper corpus and a Bengali literary corpus, and should
-apply to other languages and other non-Wikipedia sources, such as government
-documents or social media data.
+This workbook walks through measuring gender bias using a corpus other than Wikipedia. It covers two paths: building a corpus from a **newspaper archive**, and
+building a corpus from a **literary source like Wikisource**. It generalizes the steps used for a Bengali newspaper corpus and a Bengali literary corpus, and should
+apply to other languages and other non-Wikipedia sources, such as government documents or social media data.
 
-Read the [Wikipedia Workbook](wikipedia_workbook.md) first. Once you have a corpus
-built, either from a newspaper or from a literary source, the remaining steps
-(tokenizing, training a Word2Vec model, building a gender direction, calculating
-bias scores) are identical to the Wikipedia workbook. This workbook covers what is
+Read the [Wikipedia Workbook](wikipedia_workbook.md) first. Once you have a corpus built, either from a newspaper or from a literary source, the remaining steps
+(tokenizing, training a Word2Vec model, building a gender direction, calculating bias scores) are identical to the Wikipedia workbook. This workbook covers what is
 different: finding and preparing a non-Wikipedia corpus in the first place.
 
 ## Why use a corpus other than Wikipedia
 
-Prior work has shown that gender bias measured in word embeddings is not always
-consistent across different types of text within the same language. A study of
-English found that bias differs across news, social media, biomedical text, and
-Wikipedia. A similar study of Arabic compared Wikipedia against newspaper archives.
-For Bengali, comparing Wikipedia against both a newspaper corpus and a literary
-corpus revealed that a distinctive pattern found in Wikipedia did not appear in the
-newspaper corpus, and that the literary corpus's older, more stylistically varied
-language actually broke down the reliability of the measurement method itself. If
-you have already measured bias using Wikipedia for your language, comparing it
-against a second, different type of corpus is a natural next step, and may reveal
+Prior work has shown that gender bias measured in word embeddings is not always consistent across different types of text within the same language. A study of
+English found that bias differs across news, social media, biomedical text, and Wikipedia. A similar study of Arabic compared Wikipedia against newspaper archives. For Bengali, comparing Wikipedia against both a newspaper corpus and a literary corpus revealed that a distinctive pattern found in Wikipedia did not appear in the
+newspaper corpus, and that the literary corpus's older, more stylistically varied language actually broke down the reliability of the measurement method itself. If
+you have already measured bias using Wikipedia for your language, comparing it against a second, different type of corpus is a natural next step, and may reveal
 whether your Wikipedia results reflect the language generally, or something
 specific to Wikipedia's writing style.
-
----
+-------------------------------------------------------------------------------------
 
 # Section 1: Newspaper
 
