@@ -16,7 +16,8 @@ newspaper corpus, and that the literary corpus's older, more stylistically varie
 you have already measured bias using Wikipedia for your language, comparing it against a second, different type of corpus is a natural next step, and may reveal
 whether your Wikipedia results reflect the language generally, or something
 specific to Wikipedia's writing style.
--
+
+---
 
 # Section 1: Newspaper
 
