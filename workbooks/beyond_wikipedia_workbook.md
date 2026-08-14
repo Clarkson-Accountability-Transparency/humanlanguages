@@ -257,4 +257,4 @@ newspaper, literary, or both) for the same language, compare:
    corpora? A large gap can explain differences you observe, or flag a result
    that should not be trusted.
 
-Once you have all your results, you can store them here in this repository.
+Once you have all your results, you can store them here in [this repository](https://github.com/Clarkson-Accountability-Transparency/humanlanguages/tree/master/languages), under a folder named for your language.
