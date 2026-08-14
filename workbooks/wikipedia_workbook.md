@@ -253,4 +253,4 @@ is worth checking for your language too.
 
 ## What to do with your results
 
-Once you have all your results, you can store them here in this repository, under a folder named for your language.
+Once you have all your results, you can store them here in [this repository](https://github.com/Clarkson-Accountability-Transparency/humanlanguages/tree/master/languages), under a folder named for your language.
