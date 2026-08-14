@@ -248,10 +248,10 @@ filename year that falls after the author's known date of death.
 Once you have bias scores from both a Wikipedia corpus and a second corpus (whether
 newspaper, literary, or both) for the same language, compare:
 
-- Whether the overall simple and weighted averages point in the same direction in
+1:- Whether the overall simple and weighted averages point in the same direction in
   both corpora, or flip.
-- Whether individual profession words reverse direction between the two corpora.
-- Whether the PCA reliability gap is meaningfully different between the two
+2:- Whether individual profession words reverse direction between the two corpora.
+3:- Whether the PCA reliability gap is meaningfully different between the two
   corpora, this can help explain differences you observe, or flag when a result
   should not be trusted.
 
