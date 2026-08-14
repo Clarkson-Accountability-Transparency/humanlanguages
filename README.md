@@ -9,6 +9,8 @@ text, including gender bias. This repository documents a method for measuring th
 bias, called DirectBias, and applies it across different languages and different
 types of text.
 
+Check out our research papers on this topic [here](https://lin-web.clarkson.edu/~jmatthew/HumanLanguages/) as well.
+
 ## What has already been done
 
 This methodology has already been applied to nine languages: English, Chinese,
