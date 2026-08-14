@@ -38,6 +38,4 @@ language you are working with.
 
 ## Where this comes from
 
-This work builds on the original gender bias measurement method introduced by
-Bolukbasi et al. (2016), which was extended to nine more languages, and is now
-being extended to more languages and corpus types beyond that.
+This work builds on the original gender bias measurement method introduced by Bolukbasi et al. (2016) for English, later extended to eight additional languages, and is now being extended to more languages and corpus types beyond that.
