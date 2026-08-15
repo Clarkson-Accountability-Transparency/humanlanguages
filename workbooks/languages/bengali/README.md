@@ -1,8 +1,8 @@
 # Bengali
 
 Bengali gender bias measurement, following the general methodology in
-[../wikipedia_workbook.md](../wikipedia_workbook.md) and
-[../beyond_wikipedia_workbook.md](workbooks/beyond_wikipedia_workbook.md).
+[../../wikipedia_workbook.md](../../wikipedia_workbook.md) and
+[../../beyond_wikipedia_workbook.md](../../beyond_wikipedia_workbook.md).
 
 Measured using three corpora: Wikipedia, a literary corpus built from Bengali
 Wikisource, and a newspaper corpus built from Prothom Alo.
